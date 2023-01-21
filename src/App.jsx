@@ -1,34 +1,85 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import './App.css'
+import "./App.css";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <div className="App">
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src="/vite.svg" className="logo" alt="Vite logo" />
-        </a>
-        <a href="https://reactjs.org" target="_blank">
-          <img src={reactLogo} className="logo react" alt="React logo" />
-        </a>
-      </div>
-      <h1>Vite + React</h1>
-      <div className="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Edit <code>src/App.jsx</code> and save to test HMR
-        </p>
-      </div>
-      <p className="read-the-docs">
-        Click on the Vite and React logos to learn more
-      </p>
+    <div
+      style={{
+        display: "flex",
+        flexDirection: "column",
+        alignItems: "center",
+        justifyContent: "flex-start",
+        width: "100%",
+        height: "auto",
+      }}
+    >
+      <header
+        style={{
+          width: "100vw",
+          height: "10vh",
+          backgroundColor: "turquoise",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
+          fontSize: "32px",
+          fontFamily: "sans-serif",
+        }}
+      >
+        <h1>The Iframe Element</h1>
+      </header>
+      <main
+        style={{
+          width: "100vw",
+          height: "80vh",
+          backgroundColor: "paleturquoise",
+          display: "flex",
+          justifyContent: "space-around",
+          alignItems: "center",
+        }}
+      >
+        <section
+          style={{
+            width: "50vw",
+            height: "inherit",
+            backgroundColor: "lightcoral",
+          }}
+        ></section>
+        <sidebar
+          style={{
+            width: "30vw",
+            height: "inherit",
+            backgroundColor: "lightcoral",
+          }}
+        >
+          <iframe
+            src="https://class.kavano.org/class/bondahesh/ardavahishta"
+            title="Alocom iframe test"
+            allow="camera *;microphone *;fullscreen;"
+            width="100%"
+            height="700px"
+            referrerPolicy="strict-origin"
+            frameBorder="0"
+            scrolling="no"
+            style={{
+              padding: "0px",
+              margin: "0px",
+              display: "flex",
+              width: "100%",
+              backgroundColor: "transparent",
+              overflow: "hidden",
+              height: "100%",
+            }}
+          />
+        </sidebar>
+      </main>
+      <footer
+        style={{
+          width: "100vw",
+          height: "10vh",
+          backgroundColor: "burlywood",
+        }}
+      ></footer>
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
