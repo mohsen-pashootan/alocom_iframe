@@ -60,7 +60,7 @@ function App() {
               }}
             >
               <iframe
-                src="https://class.kavano.org/class/bondahesh/ardavahishta"
+                src="https://class.kavano.org/class/good/74b91087"
                 title="Alocom iframe test"
                 allow="camera *;microphone *;fullscreen;"
                 width="100%"
