@@ -1,6 +1,13 @@
 import "./App.css";
+import { useState } from "react";
 
 function App() {
+  const [mobileLayout, setMobileLayout] = useState(true);
+
+  const handleLayoutChange = () => {
+    setMobileLayout(!mobileLayout);
+  };
+
   return (
     <div
       style={{
@@ -36,48 +43,91 @@ function App() {
           alignItems: "center",
         }}
       >
-        <section
-          style={{
-            width: "50vw",
-            height: "inherit",
-            backgroundColor: "lightcoral",
-          }}
-        ></section>
-        <sidebar
-          style={{
-            width: "30vw",
-            height: "inherit",
-            backgroundColor: "lightcoral",
-          }}
-        >
-          <iframe
-            src="https://class.kavano.org/class/bondahesh/ardavahishta"
-            title="Alocom iframe test"
-            allow="camera *;microphone *;fullscreen;"
-            width="100%"
-            height="700px"
-            referrerPolicy="strict-origin"
-            frameBorder="0"
-            scrolling="no"
-            style={{
-              padding: "0px",
-              margin: "0px",
-              display: "flex",
-              width: "100%",
-              backgroundColor: "transparent",
-              overflow: "hidden",
-              height: "100%",
-            }}
-          />
-        </sidebar>
+        {mobileLayout ? (
+          <>
+            <section
+              style={{
+                width: "50vw",
+                height: "inherit",
+                backgroundColor: "lightcoral",
+              }}
+            ></section>
+            <sidebar
+              style={{
+                width: "30vw",
+                height: "inherit",
+                backgroundColor: "lightcoral",
+              }}
+            >
+              <iframe
+                src="https://class.kavano.org/class/bondahesh/ardavahishta"
+                title="Alocom iframe test"
+                allow="camera *;microphone *;fullscreen;"
+                width="100%"
+                height="700px"
+                referrerPolicy="strict-origin"
+                frameBorder="0"
+                scrolling="no"
+                style={{
+                  padding: "0px",
+                  margin: "0px",
+                  display: "flex",
+                  width: "100%",
+                  backgroundColor: "transparent",
+                  overflow: "hidden",
+                  height: "100%",
+                }}
+              />
+            </sidebar>
+          </>
+        ) : (
+          <section style={{ width: "100%", height: "100%", padding: "15px" }}>
+            <iframe
+              src="https://class.kavano.org/class/bondahesh/ardavahishta"
+              title="Alocom iframe test"
+              allow="camera *;microphone *;fullscreen;"
+              width="100%"
+              height="700px"
+              referrerPolicy="strict-origin"
+              frameBorder="0"
+              scrolling="no"
+              style={{
+                padding: "0px",
+                margin: "0px",
+                display: "flex",
+                width: "100%",
+                backgroundColor: "transparent",
+                overflow: "hidden",
+                height: "100%",
+              }}
+            />
+          </section>
+        )}
       </main>
       <footer
         style={{
           width: "100vw",
           height: "10vh",
           backgroundColor: "burlywood",
+          display: "flex",
+          justifyContent: "center",
+          alignItems: "center",
         }}
-      ></footer>
+      >
+        <button
+          onClick={handleLayoutChange}
+          style={{
+            width: "130px",
+            height: "40px",
+            borderRadius: "12px",
+            border: "none",
+            boxShadow: "2px 3px 4px #adacacad",
+            cursor: "pointer",
+          }}
+        >
+          تغییر ریسپانسیو
+        </button>
+      </footer>
     </div>
   );
 }
