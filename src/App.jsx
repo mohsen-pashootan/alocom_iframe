@@ -83,7 +83,7 @@ function App() {
         ) : (
           <section style={{ width: "100%", height: "100%", padding: "15px" }}>
             <iframe
-              src="https://class.kavano.org/class/good/74b91087"
+              src="https://test.alocom.co/class/kavano/daily"
               title="Alocom iframe test"
               allow="camera *;microphone *;fullscreen;"
               width="100%"
