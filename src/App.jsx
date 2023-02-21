@@ -62,7 +62,7 @@ function App() {
               <iframe
                 src="https://test.alocom.co/class/kavano/daily"
                 title="Alocom iframe test"
-                allow="camera *;microphone *;fullscreen;"
+                allow="display-capture ;camera *;microphone *;fullscreen;"
                 width="100%"
                 height="700px"
                 referrerPolicy="strict-origin"
